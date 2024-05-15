@@ -13,8 +13,8 @@ package service
 import (
 	"fmt"
 
-	"github.com/IceWhaleTech/CasaOS/service/model"
-	model2 "github.com/IceWhaleTech/CasaOS/service/model"
+	"github.com/Vioneta/VionetaOS/service/model"
+	model2 "github.com/Vioneta/VionetaOS/service/model"
 	"github.com/moby/sys/mount"
 	"golang.org/x/sys/unix"
 	"gorm.io/gorm"

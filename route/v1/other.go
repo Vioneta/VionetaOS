@@ -3,9 +3,9 @@ package v1
 import (
 	"fmt"
 
-	"github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/common_err"
-	"github.com/IceWhaleTech/CasaOS/service"
+	"github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/pkg/utils/common_err"
+	"github.com/Vioneta/VionetaOS/service"
 	"github.com/gin-gonic/gin"
 )
 

@@ -16,9 +16,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/constants"
-	"github.com/IceWhaleTech/CasaOS/common"
-	"github.com/IceWhaleTech/CasaOS/model"
+	"github.com/Vioneta/VionetaOS-Common/utils/constants"
+	"github.com/Vioneta/VionetaOS/common"
+	"github.com/Vioneta/VionetaOS/model"
 	"github.com/go-ini/ini"
 )
 

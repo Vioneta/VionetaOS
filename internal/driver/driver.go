@@ -3,7 +3,7 @@ package driver
 import (
 	"context"
 
-	"github.com/IceWhaleTech/CasaOS/model"
+	"github.com/Vioneta/VionetaOS/model"
 )
 
 type Driver interface {

@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/IceWhaleTech/CasaOS/codegen"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/file"
-	"github.com/IceWhaleTech/CasaOS/service"
+	"github.com/Vioneta/VionetaOS/codegen"
+	"github.com/Vioneta/VionetaOS/pkg/utils/file"
+	"github.com/Vioneta/VionetaOS/service"
 	"github.com/labstack/echo/v4"
 	"github.com/mholt/archiver/v3"
 )

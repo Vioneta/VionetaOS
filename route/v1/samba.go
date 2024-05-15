@@ -18,16 +18,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS-Common/utils/systemctl"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS-Common/utils/systemctl"
 	"go.uber.org/zap"
 
-	"github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/pkg/samba"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/common_err"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/file"
-	"github.com/IceWhaleTech/CasaOS/service"
-	model2 "github.com/IceWhaleTech/CasaOS/service/model"
+	"github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/pkg/samba"
+	"github.com/Vioneta/VionetaOS/pkg/utils/common_err"
+	"github.com/Vioneta/VionetaOS/pkg/utils/file"
+	"github.com/Vioneta/VionetaOS/service"
+	model2 "github.com/Vioneta/VionetaOS/service/model"
 	"github.com/gin-gonic/gin"
 )
 

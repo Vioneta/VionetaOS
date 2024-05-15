@@ -11,9 +11,9 @@
 package service
 
 import (
-	"github.com/IceWhaleTech/CasaOS-Common/external"
-	"github.com/IceWhaleTech/CasaOS/codegen/message_bus"
-	"github.com/IceWhaleTech/CasaOS/pkg/config"
+	"github.com/Vioneta/VionetaOS-Common/external"
+	"github.com/Vioneta/VionetaOS/codegen/message_bus"
+	"github.com/Vioneta/VionetaOS/pkg/config"
 	"github.com/gorilla/websocket"
 	"github.com/patrickmn/go-cache"
 	"gorm.io/gorm"

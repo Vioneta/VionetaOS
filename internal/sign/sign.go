@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS/pkg/sign"
+	"github.com/Vioneta/VionetaOS/pkg/sign"
 )
 
 var once sync.Once

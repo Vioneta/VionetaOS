@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS/common"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/httper"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS/common"
+	"github.com/Vioneta/VionetaOS/pkg/utils/httper"
 	"github.com/gin-gonic/gin"
 	"github.com/tidwall/gjson"
 	"go.uber.org/zap"

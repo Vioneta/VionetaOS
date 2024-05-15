@@ -18,8 +18,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/service"
+	"github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/service"
 )
 
 func SendAllHardwareStatusBySocket() {

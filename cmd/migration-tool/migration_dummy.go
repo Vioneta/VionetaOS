@@ -1,7 +1,7 @@
 package main
 
 import (
-	interfaces "github.com/IceWhaleTech/CasaOS-Common"
+	interfaces "github.com/Vioneta/VionetaOS-Common"
 )
 
 type migrationTool struct{}

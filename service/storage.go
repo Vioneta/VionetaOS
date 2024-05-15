@@ -3,9 +3,9 @@ package service
 import (
 	"io/ioutil"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/file"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/httper"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS/pkg/utils/file"
+	"github.com/Vioneta/VionetaOS/pkg/utils/httper"
 	"go.uber.org/zap"
 )
 

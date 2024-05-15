@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/command"
+	"github.com/Vioneta/VionetaOS/pkg/utils/command"
 	"go.uber.org/goleak"
 	"gotest.tools/assert"
 )

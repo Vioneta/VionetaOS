@@ -7,16 +7,16 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/common_err"
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	sshHelper "github.com/IceWhaleTech/CasaOS-Common/utils/ssh"
+	"github.com/Vioneta/VionetaOS-Common/utils/common_err"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	sshHelper "github.com/Vioneta/VionetaOS-Common/utils/ssh"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/ssh"
 
-	modelCommon "github.com/IceWhaleTech/CasaOS-Common/model"
+	modelCommon "github.com/Vioneta/VionetaOS-Common/model"
 )
 
 var upgrader = websocket.Upgrader{

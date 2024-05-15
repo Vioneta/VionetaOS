@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/IceWhaleTech/CasaOS/service"
-	"github.com/IceWhaleTech/CasaOS/types"
+	"github.com/Vioneta/VionetaOS/service"
+	"github.com/Vioneta/VionetaOS/types"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
 )

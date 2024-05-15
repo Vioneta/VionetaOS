@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS/drivers/base"
-	"github.com/IceWhaleTech/CasaOS/internal/driver"
-	"github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS/drivers/base"
+	"github.com/Vioneta/VionetaOS/internal/driver"
+	"github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/pkg/utils"
 	"github.com/go-resty/resty/v2"
 	"go.uber.org/zap"
 )

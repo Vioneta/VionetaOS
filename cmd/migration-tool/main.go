@@ -15,12 +15,12 @@ import (
 	"fmt"
 	"os"
 
-	interfaces "github.com/IceWhaleTech/CasaOS-Common"
-	"github.com/IceWhaleTech/CasaOS-Common/utils/systemctl"
-	"github.com/IceWhaleTech/CasaOS/common"
-	"github.com/IceWhaleTech/CasaOS/pkg/config"
-	"github.com/IceWhaleTech/CasaOS/pkg/sqlite"
-	"github.com/IceWhaleTech/CasaOS/service"
+	interfaces "github.com/Vioneta/VionetaOS-Common"
+	"github.com/Vioneta/VionetaOS-Common/utils/systemctl"
+	"github.com/Vioneta/VionetaOS/common"
+	"github.com/Vioneta/VionetaOS/pkg/config"
+	"github.com/Vioneta/VionetaOS/pkg/sqlite"
+	"github.com/Vioneta/VionetaOS/service"
 	"gorm.io/gorm"
 )
 

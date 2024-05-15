@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/pkg/utils/file"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/pkg/utils/file"
 	"github.com/moby/sys/mountinfo"
 	"go.uber.org/zap"
 )

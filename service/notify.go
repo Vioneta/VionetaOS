@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS/common"
-	model2 "github.com/IceWhaleTech/CasaOS/model"
-	"github.com/IceWhaleTech/CasaOS/model/notify"
-	"github.com/IceWhaleTech/CasaOS/service/model"
-	"github.com/IceWhaleTech/CasaOS/types"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS/common"
+	model2 "github.com/Vioneta/VionetaOS/model"
+	"github.com/Vioneta/VionetaOS/model/notify"
+	"github.com/Vioneta/VionetaOS/service/model"
+	"github.com/Vioneta/VionetaOS/types"
 	"go.uber.org/zap"
 	"golang.org/x/sync/syncmap"
 
