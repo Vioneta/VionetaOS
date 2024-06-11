@@ -14,10 +14,10 @@ jobs:
       project-name: VionetaOS
       file-name: vionetaos
     secrets:
-      GoogleID: ${{ secrets.GoogleID }}
-      GoogleSecret: ${{ secrets.GoogleSecret }}
-      # DropboxKey: ${{ secrets.DropboxKey }}
-      # DropboxSecret: ${{ secrets.DropboxSecret }}
+      # GoogleID: ${{ secrets.GoogleID }}
+      # GoogleSecret: ${{ secrets.GoogleSecret }}
+      DropboxKey: ${{ secrets.DropboxKey }}
+      DropboxSecret: ${{ secrets.DropboxSecret }}
       # OneDriveID: ${{ secrets.OneDriveID }}
       # OneDriveSecret: ${{ secrets.OneDriveSecret }}
       # OneDrivePublic: ${{ secrets.OneDrivePublic }}

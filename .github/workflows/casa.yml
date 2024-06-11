@@ -123,7 +123,7 @@ jobs:
           name: v${{ env.VERSION }}
           gzip: false
           allow_override: false
-          prerelease: true
+          prerelease: false
 
     #  - name: Upload linux-amd64-vionetaos.tar.gz
     #    id: upload_assets_amd64
