@@ -1,11 +1,11 @@
 /*
- * @Author: LinkLeong link@icewhale.com
+ * @Author: LinkLeong link@vioneta.com
  * @Date: 2022-05-13 18:15:46
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-07-21 15:27:53
  * @FilePath: /CasaOS/pkg/utils/version/version.go
  * @Description:
- * @Website: https://www.casaos.io
+ * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
  */
 package version

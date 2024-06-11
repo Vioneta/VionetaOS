@@ -1,6 +1,6 @@
 #!/bin/bash
 ###
- # @Author:  LinkLeong link@icewhale.com
+ # @Author:  LinkLeong link@vioneta.com
  # @Date: 2022-06-30 10:08:33
  # @LastEditors: LinkLeong
  # @LastEditTime: 2022-07-01 11:17:54
@@ -14,17 +14,17 @@
 readonly UNAME_M="$(uname -m)"
 
 # CasaOS PATHS
-readonly CASA_REPO=IceWhaleTech/CasaOS
-readonly CASA_UNZIP_TEMP_FOLDER=/tmp/casaos
-readonly CASA_BIN=casaos
-readonly CASA_BIN_PATH=/usr/bin/casaos
-readonly CASA_CONF_PATH=/etc/casaos.conf
-readonly CASA_SERVICE_PATH=/etc/systemd/system/casaos.service
-readonly CASA_HELPER_PATH=/usr/share/casaos/shell/
-readonly CASA_USER_CONF_PATH=/var/lib/casaos/conf/
-readonly CASA_DB_PATH=/var/lib/casaos/db/
-readonly CASA_TEMP_PATH=/var/lib/casaos/temp/
-readonly CASA_LOGS_PATH=/var/log/casaos/
+readonly CASA_REPO=Vioneta/CasaOS
+readonly CASA_UNZIP_TEMP_FOLDER=/tmp/vionetaos
+readonly CASA_BIN=vionetaos
+readonly CASA_BIN_PATH=/usr/bin/vionetaos
+readonly CASA_CONF_PATH=/etc/vionetaos.conf
+readonly CASA_SERVICE_PATH=/etc/systemd/system/vionetaos.service
+readonly CASA_HELPER_PATH=/usr/share/vionetaos/shell/
+readonly CASA_USER_CONF_PATH=/var/lib/vionetaos/conf/
+readonly CASA_DB_PATH=/var/lib/vionetaos/db/
+readonly CASA_TEMP_PATH=/var/lib/vionetaos/temp/
+readonly CASA_LOGS_PATH=/var/log/vionetaos/
 readonly CASA_PACKAGE_EXT=".tar.gz"
 readonly CASA_RELEASE_API="https://api.github.com/repos/${CASA_REPO}/releases"
 readonly CASA_OPENWRT_DOCS="https://github.com/Vioneta/VionetaOS-OpenWrt"
@@ -88,9 +88,9 @@ Check_Exist() {
    
     Show 2 "Start cleaning up the old version."
     
-    ${sudo_cmd} rm -rf /usr/lib/systemd/system/casaos.service
+    ${sudo_cmd} rm -rf /usr/lib/systemd/system/vionetaos.service
     
-    ${sudo_cmd} rm -rf /lib/systemd/system/casaos.service
+    ${sudo_cmd} rm -rf /lib/systemd/system/vionetaos.service
     
     ${sudo_cmd} rm -rf /usr/local/bin/${CASA_BIN}
     

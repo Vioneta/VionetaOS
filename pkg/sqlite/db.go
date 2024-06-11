@@ -1,11 +1,11 @@
 /*
- * @Author: LinkLeong link@icewhale.com
+ * @Author: LinkLeong link@vioneta.com
  * @Date: 2022-05-13 18:15:46
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-08-31 13:39:24
  * @FilePath: /CasaOS/pkg/sqlite/db.go
  * @Description:
- * @Website: https://www.casaos.io
+ * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
  */
 package sqlite

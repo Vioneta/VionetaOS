@@ -1,11 +1,11 @@
 /*
- * @Author: LinkLeong link@icewhale.com
+ * @Author: LinkLeong link@vioneta.com
  * @Date: 2021-09-30 18:18:14
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-06-02 18:00:57
  * @FilePath: /CasaOS/service/rely.go
  * @Description:
- * @Website: https://www.casaos.io
+ * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
  */
 package service

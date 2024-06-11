@@ -103,7 +103,7 @@ func GetSystemConfigDebug(c *gin.Context) {
 	c.JSON(common_err.SUCCESS, model.Result{Success: common_err.SUCCESS, Message: common_err.GetMsg(common_err.SUCCESS), Data: bugContent})
 }
 
-// @Summary get casaos server port
+// @Summary get vionetaos server port
 // @Produce  application/json
 // @Accept application/json
 // @Tags sys
@@ -119,7 +119,7 @@ func GetCasaOSPort(c *gin.Context) {
 		})
 }
 
-// @Summary edit casaos server port
+// @Summary edit vionetaos server port
 // @Produce  application/json
 // @Accept application/json
 // @Tags sys
@@ -158,7 +158,7 @@ func PutCasaOSPort(c *gin.Context) {
 		})
 }
 
-// @Summary active killing casaos
+// @Summary active killing vionetaos
 // @Produce  application/json
 // @Accept application/json
 // @Tags sys

@@ -64,7 +64,7 @@ __get_download_domain(){
        region=$(curl --connect-timeout 2 -s https://ifconfig.io/country_code || echo "")
     fi
     if [[ "${region}" = "China" ]] || [[ "${region}" = "CN" ]]; then
-        echo "https://casaos.oss-cn-shanghai.aliyuncs.com/"
+        echo "https://vionetaos.oss-cn-shanghai.aliyuncs.com/"
     else
         echo "https://github.com/"
     fi
@@ -75,7 +75,7 @@ DOWNLOAD_DOMAIN=$(__get_download_domain)
 BUILD_PATH=$(dirname "${BASH_SOURCE[0]}")/../../..
 SOURCE_ROOT=${BUILD_PATH}/sysroot
 
-APP_NAME="casaos"
+APP_NAME="vionetaos"
 
 # check if migration is needed
 SOURCE_BIN_PATH=${SOURCE_ROOT}/usr/bin

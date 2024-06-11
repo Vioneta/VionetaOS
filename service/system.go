@@ -120,7 +120,7 @@ func (c *systemService) GetDeviceInfo() model.DeviceInfo {
 	return m
 }
 func (c *systemService) GenreateSystemEntry() {
-	modelsPath := "/var/lib/casaos/www/modules"
+	modelsPath := "/var/lib/vionetaos/www/modules"
 	entryFileName := "entry.json"
 	entryFilePath := filepath.Join(config.AppInfo.DBPath, "db", entryFileName)
 	file.IsNotExistCreateFile(entryFilePath)
@@ -150,7 +150,7 @@ func (c *systemService) GenreateSystemEntry() {
 }
 func (c *systemService) GetSystemEntry() string {
 
-	modelsPath := "/var/lib/casaos/www/modules"
+	modelsPath := "/var/lib/vionetaos/www/modules"
 	entryFileName := "entry.json"
 	dir, err := os.ReadDir(modelsPath)
 	if err != nil {
@@ -362,12 +362,12 @@ func (s *systemService) UpdateSystemVersion(version string) {
 		os.Remove(config.AppInfo.LogPath + "/upgrade.log")
 	}
 	file.CreateFile(config.AppInfo.LogPath + "/upgrade.log")
-	// go command2.OnlyExec("curl -fsSL https://raw.githubusercontent.com/LinkLeong/casaos-alpha/main/update.sh | bash")
+	// go command2.OnlyExec("curl -fsSL https://raw.githubusercontent.com/LinkLeong/vionetaos-alpha/main/update.sh | bash")
 	if len(config.ServerInfo.UpdateUrl) > 0 {
 		go command2.OnlyExec("curl -fsSL " + config.ServerInfo.UpdateUrl + " | bash")
 	} else {
 		osRelease, _ := file.ReadOSRelease()
-		go command2.OnlyExec("curl -fsSL https://get.casaos.io/update?t=" + osRelease["MANUFACTURER"] + " | bash")
+		go command2.OnlyExec("curl -fsSL https://get.vionetaos.io/update?t=" + osRelease["MANUFACTURER"] + " | bash")
 	}
 
 	// s.log.Error(config.AppInfo.ProjectPath + "/shell/tool.sh -r " + version)

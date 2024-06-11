@@ -1,11 +1,11 @@
 /*
- * @Author: LinkLeong link@icewhale.com
+ * @Author: LinkLeong link@vioneta.com
  * @Date: 2022-06-15 11:30:47
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-06-23 18:40:40
  * @FilePath: /CasaOS/model/system_model/verify_information.go
  * @Description:
- * @Website: https://www.casaos.io
+ * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
  */
 package system_model

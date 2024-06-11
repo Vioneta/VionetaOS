@@ -1,6 +1,6 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
-project_name: casaos
+project_name: vionetaos
 before:
   hooks:
   - go generate
@@ -9,8 +9,8 @@ before:
   - go test -race -v ./...
 
 builds:
-- id: casaos-amd64
-  binary: build/sysroot/usr/bin/casaos
+- id: vionetaos-amd64
+  binary: build/sysroot/usr/bin/vionetaos
   hooks:
     post:
     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -36,8 +36,8 @@ builds:
   - linux
   goarch:
   - amd64
-- id: casaos-arm64
-  binary: build/sysroot/usr/bin/casaos
+- id: vionetaos-arm64
+  binary: build/sysroot/usr/bin/vionetaos
   # hooks:
   #   post:
   #     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -63,8 +63,8 @@ builds:
   - linux
   goarch:
   - arm64
-- id: casaos-arm-7
-  binary: build/sysroot/usr/bin/casaos
+- id: vionetaos-arm-7
+  binary: build/sysroot/usr/bin/vionetaos
   hooks:
     post:
     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -92,8 +92,8 @@ builds:
   - arm
   goarm:
   - "7"
-- id: casaos-migration-tool-amd64
-  binary: build/sysroot/usr/bin/casaos-migration-tool
+- id: vionetaos-migration-tool-amd64
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
   hooks:
     post:
     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -114,8 +114,8 @@ builds:
   - linux
   goarch:
   - amd64
-- id: casaos-migration-tool-arm64
-  binary: build/sysroot/usr/bin/casaos-migration-tool
+- id: vionetaos-migration-tool-arm64
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
   # hooks:
   #   post:
   #     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -136,8 +136,8 @@ builds:
   - linux
   goarch:
   - arm64
-- id: casaos-migration-tool-arm-7
-  binary: build/sysroot/usr/bin/casaos-migration-tool
+- id: vionetaos-migration-tool-arm-7
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
   hooks:
     post:
     - upx --best --lzma -v --no-progress "{{ .Path }}"
@@ -163,20 +163,20 @@ builds:
 archives:
 - name_template: >-
     {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-v{{ .Version }}
-  id: casaos
+  id: vionetaos
   builds:
-  - casaos-amd64
-  - casaos-arm64
-  - casaos-arm-7
+  - vionetaos-amd64
+  - vionetaos-arm64
+  - vionetaos-arm-7
   files:
   - build/**/*
 - name_template: >-
     {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-migration-tool-v{{ .Version }}
-  id: casaos-migration-tool
+  id: vionetaos-migration-tool
   builds:
-  - casaos-migration-tool-amd64
-  - casaos-migration-tool-arm64
-  - casaos-migration-tool-arm-7
+  - vionetaos-migration-tool-amd64
+  - vionetaos-migration-tool-arm64
+  - vionetaos-migration-tool-arm-7
   files:
   - build/sysroot/etc/**/*
 checksum:
@@ -191,7 +191,7 @@ changelog:
     - "^test:"
 # release:
 #   github:
-#     owner: IceWhaleTech
+#     owner: Vioneta
 #     name: CasaOS
 #   draft: true
 #   prerelease: auto
@@ -199,7 +199,7 @@ changelog:
 #   name_template: "v{{ .Version }}"
 release:
   github:
-    owner: IceWhaleTech
+    owner: Vioneta
     name: CasaOS
   draft: true
   prerelease: auto

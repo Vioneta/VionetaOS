@@ -1,12 +1,12 @@
 {
-  "name": "@icewhale/casaos-openapi",
+  "name": "@vioneta/vionetaos-openapi",
   "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf generate",
     "build": "rm -rf dist && tsc && yarn clean",
-    "generate:local": "openapi-generator-cli generate -g typescript-axios -i ./api/casaos/openapi.yaml -o ./generate",
-    "generate:npx": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i ./api/casaos/openapi.yaml -o ./generate",
-    "generate:ts": "npx openapi-typescript-codegen --input ./api/casaos/openapi.yaml --output ./generate",
+    "generate:local": "openapi-generator-cli generate -g typescript-axios -i ./api/vionetaos/openapi.yaml -o ./generate",
+    "generate:npx": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i ./api/vionetaos/openapi.yaml -o ./generate",
+    "generate:ts": "npx openapi-typescript-codegen --input ./api/vionetaos/openapi.yaml --output ./generate",
     "start": "yarn generate:local && yarn build"
   },
   "homepage": "https://github.com/Vioneta/VionetaOS#readme",
@@ -33,6 +33,6 @@
     "openapi-typescript-codegen": "^0.23.0",
     "typescript": "^4.9.5"
   },
-  "author": "casaos",
+  "author": "vionetaos",
   "license": "Apache-2.0"
 }

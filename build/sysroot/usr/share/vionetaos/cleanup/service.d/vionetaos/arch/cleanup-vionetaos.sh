@@ -3,20 +3,20 @@
 set -e
 
 readonly CASA_SERVICES=(
-    "casaos.service"
+    "vionetaos.service"
     "devmon@devmon.service"
 )
 
-readonly CASA_EXEC=casaos
-readonly CASA_CONF=/etc/casaos/casaos.conf
-readonly CASA_URL=/var/run/casaos/casaos.url
-readonly CASA_SERVICE_USR=/usr/lib/systemd/system/casaos.service
-readonly CASA_SERVICE_LIB=/lib/systemd/system/casaos.service
-readonly CASA_SERVICE_ETC=/etc/systemd/system/casaos.service
+readonly CASA_EXEC=vionetaos
+readonly CASA_CONF=/etc/vionetaos/vionetaos.conf
+readonly CASA_URL=/var/run/vionetaos/vionetaos.url
+readonly CASA_SERVICE_USR=/usr/lib/systemd/system/vionetaos.service
+readonly CASA_SERVICE_LIB=/lib/systemd/system/vionetaos.service
+readonly CASA_SERVICE_ETC=/etc/systemd/system/vionetaos.service
 
 # Old Casa Files
 readonly CASA_PATH=/casaOS
-readonly CASA_CONF_PATH_OLD=/etc/casaos.conf
+readonly CASA_CONF_PATH_OLD=/etc/vionetaos.conf
 
 readonly aCOLOUR=(
     '\e[38;5;154m' # green  	| Lines, bullets and separators
@@ -118,9 +118,9 @@ Uninstall_Casaos() {
     rm -rvf ${CASA_CONF} || Show 3 "Failed to remove ${CASA_CONF}"
     rm -rvf ${CASA_URL} || Show 3 "Failed to remove ${CASA_URL}"
 
-    rm -rvf /var/lib/casaos/app_category.json
-    rm -rvf /var/lib/casaos/app_list.json
-    rm -rvf /var/lib/casaos/docker_root
+    rm -rvf /var/lib/vionetaos/app_category.json
+    rm -rvf /var/lib/vionetaos/app_list.json
+    rm -rvf /var/lib/vionetaos/docker_root
 }
 
 Detecting_CasaOS

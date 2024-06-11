@@ -1,5 +1,5 @@
-//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/casaos/openapi.yaml > codegen/casaos_api.go"
-//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/IceWhaleTech/CasaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
+//go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/vionetaos/openapi.yaml > codegen/vionetaos_api.go"
+//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/Vioneta/CasaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 package main
 
 import (
@@ -44,10 +44,10 @@ var (
 	//go:embed api/index.html
 	_docHTML string
 
-	//go:embed api/casaos/openapi.yaml
+	//go:embed api/vionetaos/openapi.yaml
 	_docYAML string
 
-	//go:embed build/sysroot/etc/casaos/casaos.conf.sample
+	//go:embed build/sysroot/etc/vionetaos/vionetaos.conf.sample
 	_confSample string
 
 	configFlag  = flag.String("c", "", "config address")
@@ -93,7 +93,7 @@ func init() {
 // @version 1.0.0
 // @contact.name lauren.pan
 // @contact.url https://www.zimaboard.com
-// @contact.email lauren.pan@icewhale.org
+// @contact.email lauren.pan@vioneta.org
 // @description casaOS v1版本api
 // @host 192.168.2.217:8089
 // @securityDefinitions.apikey ApiKeyAuth
@@ -190,7 +190,7 @@ func main() {
 		}
 	}()
 
-	urlFilePath := filepath.Join(config.CommonInfo.RuntimePath, "casaos.url")
+	urlFilePath := filepath.Join(config.CommonInfo.RuntimePath, "vionetaos.url")
 	if err := file.CreateFileAndWriteContent(urlFilePath, "http://"+listener.Addr().String()); err != nil {
 		logger.Error("error when creating address file", zap.Error(err),
 			zap.Any("address", listener.Addr().String()),
@@ -203,9 +203,9 @@ func main() {
 	command.ExecuteScripts(scriptDirectory)
 
 	if supported, err := daemon.SdNotify(false, daemon.SdNotifyReady); err != nil {
-		logger.Error("Failed to notify systemd that casaos main service is ready", zap.Any("error", err))
+		logger.Error("Failed to notify systemd that vionetaos main service is ready", zap.Any("error", err))
 	} else if supported {
-		logger.Info("Notified systemd that casaos main service is ready")
+		logger.Info("Notified systemd that vionetaos main service is ready")
 	} else {
 		logger.Info("This process is not running as a systemd service.")
 	}

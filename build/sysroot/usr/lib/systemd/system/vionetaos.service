@@ -1,0 +1,13 @@
+[Unit]
+After=vionetaos-message-bus.service
+After=rclone.service
+Description=CasaOS Main Service
+
+[Service]
+ExecStart=/usr/bin/vionetaos -c /etc/vionetaos/vionetaos.conf
+PIDFile=/var/run/vionetaos/vionetaos.pid
+Restart=always
+Type=notify
+
+[Install]
+WantedBy=multi-user.target

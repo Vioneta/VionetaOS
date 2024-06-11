@@ -1,18 +1,18 @@
 #!/bin/bash
 ###
- # @Author: LinkLeong link@icewhale.org
+ # @Author: LinkLeong link@vioneta.org
  # @Date: 2022-11-15 15:51:44
  # @LastEditors: LinkLeong
  # @LastEditTime: 2022-11-15 15:53:37
- # @FilePath: /CasaOS/build/sysroot/usr/share/casaos/cleanup/script.d/03-cleanup-casaos.sh
+ # @FilePath: /CasaOS/build/sysroot/usr/share/vionetaos/cleanup/script.d/03-cleanup-vionetaos.sh
  # @Description: 
- # @Website: https://www.casaos.io
+ # @Website: https://www.vionetaos.io
  # Copyright (c) 2022 by icewhale, All Rights Reserved. 
 ### 
 
 set -e
 
-readonly APP_NAME_SHORT=casaos
+readonly APP_NAME_SHORT=vionetaos
 
 __get_setup_script_directory_by_os_release() {
 	pushd "$(dirname "${BASH_SOURCE[0]}")/../service.d/${APP_NAME_SHORT}" &>/dev/null

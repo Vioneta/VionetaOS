@@ -1,136 +1,136 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
-project_name: casaos
+project_name: vionetaos
 before:
   hooks:
-    - go generate
-    - go run github.com/google/go-licenses@latest check . --disallowed_types=restricted
-    - go mod tidy
-    - go test -race -v ./...
+  - go generate
+  - go run github.com/google/go-licenses@latest check . --disallowed_types=restricted
+  - go mod tidy
+  - go test -race -v ./...
 
 builds:
-  - id: casaos-amd64
-    binary: build/sysroot/usr/bin/casaos
-    env:
-      - CC=x86_64-linux-gnu-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - amd64
-  - id: casaos-arm64
-    binary: build/sysroot/usr/bin/casaos
-    env:
-      - CC=aarch64-linux-gnu-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - arm64
-  - id: casaos-arm-7
-    binary: build/sysroot/usr/bin/casaos
-    env:
-      - CC=arm-linux-gnueabihf-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - arm
-    goarm:
-      - "7"
-  - id: casaos-migration-tool-amd64
-    binary: build/sysroot/usr/bin/casaos-migration-tool
-    main: ./cmd/migration-tool
-    env:
-      - CC=x86_64-linux-gnu-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - amd64
-  - id: casaos-migration-tool-arm64
-    binary: build/sysroot/usr/bin/casaos-migration-tool
-    main: ./cmd/migration-tool
-    env:
-      - CC=aarch64-linux-gnu-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - arm64
-  - id: casaos-migration-tool-arm-7
-    binary: build/sysroot/usr/bin/casaos-migration-tool
-    main: ./cmd/migration-tool
-    env:
-      - CC=arm-linux-gnueabihf-gcc
-    gcflags:
-      - all=-N -l
-    ldflags:
-      - -extldflags "-static"
-    tags:
-      - musl
-      - netgo
-      - osusergo
-    goos:
-      - linux
-    goarch:
-      - arm
-    goarm:
-      - "7"
+- id: vionetaos-amd64
+  binary: build/sysroot/usr/bin/vionetaos
+  env:
+  - CC=x86_64-linux-gnu-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - amd64
+- id: vionetaos-arm64
+  binary: build/sysroot/usr/bin/vionetaos
+  env:
+  - CC=aarch64-linux-gnu-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - arm64
+- id: vionetaos-arm-7
+  binary: build/sysroot/usr/bin/vionetaos
+  env:
+  - CC=arm-linux-gnueabihf-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - arm
+  goarm:
+  - "7"
+- id: vionetaos-migration-tool-amd64
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
+  main: ./cmd/migration-tool
+  env:
+  - CC=x86_64-linux-gnu-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - amd64
+- id: vionetaos-migration-tool-arm64
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
+  main: ./cmd/migration-tool
+  env:
+  - CC=aarch64-linux-gnu-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - arm64
+- id: vionetaos-migration-tool-arm-7
+  binary: build/sysroot/usr/bin/vionetaos-migration-tool
+  main: ./cmd/migration-tool
+  env:
+  - CC=arm-linux-gnueabihf-gcc
+  gcflags:
+  - all=-N -l
+  ldflags:
+  - -extldflags "-static"
+  tags:
+  - musl
+  - netgo
+  - osusergo
+  goos:
+  - linux
+  goarch:
+  - arm
+  goarm:
+  - "7"
 archives:
-  - name_template: >-
-      {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-v{{ .Version }}
-    id: casaos
-    builds:
-      - casaos-amd64
-      - casaos-arm64
-      - casaos-arm-7
-    files:
-      - build/**/*
-  - name_template: >-
-      {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-migration-tool-v{{ .Version }}
-    id: casaos-migration-tool
-    builds:
-      - casaos-migration-tool-amd64
-      - casaos-migration-tool-arm64
-      - casaos-migration-tool-arm-7
-    files:
-      - build/sysroot/etc/**/*
+- name_template: >-
+    {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-v{{ .Version }}
+  id: vionetaos
+  builds:
+  - vionetaos-amd64
+  - vionetaos-arm64
+  - vionetaos-arm-7
+  files:
+  - build/**/*
+- name_template: >-
+    {{ .Os }}-{{- if eq .Arch "arm" }}arm-7{{- else }}{{ .Arch }}{{- end }}-{{ .ProjectName }}-migration-tool-v{{ .Version }}
+  id: vionetaos-migration-tool
+  builds:
+  - vionetaos-migration-tool-amd64
+  - vionetaos-migration-tool-arm64
+  - vionetaos-migration-tool-arm-7
+  files:
+  - build/sysroot/etc/**/*
 checksum:
   name_template: "checksums.txt"
 snapshot:
@@ -139,11 +139,11 @@ changelog:
   sort: asc
   filters:
     exclude:
-      - "^docs:"
-      - "^test:"
+    - "^docs:"
+    - "^test:"
 # release:
 #   github:
-#     owner: IceWhaleTech
+#     owner: Vioneta
 #     name: CasaOS
 #   draft: true
 #   prerelease: auto
@@ -151,7 +151,7 @@ changelog:
 #   name_template: "v{{ .Version }}"
 release:
   github:
-    owner: IceWhaleTech
+    owner: Vioneta
     name: CasaOS
   draft: true
   prerelease: auto

@@ -13,7 +13,7 @@ func TestExecuteScripts(t *testing.T) {
 	goleak.VerifyNone(t)
 
 	// make a temp directory
-	tmpDir, err := os.MkdirTemp("", "casaos-test-*")
+	tmpDir, err := os.MkdirTemp("", "vionetaos-test-*")
 	assert.NilError(t, err)
 	defer os.RemoveAll(tmpDir)
 
