@@ -37,8 +37,8 @@ require (
 	github.com/samber/lo v1.38.1
 	github.com/shirou/gopsutil/v3 v3.23.2
 	github.com/sirupsen/logrus v1.9.3
-	github.com/stretchr/testify v1.8.4
-	github.com/tidwall/gjson v1.14.4
+	github.com/stretchr/testify v1.9.0
+	github.com/tidwall/gjson v1.17.0
 	go.uber.org/goleak v1.2.1
 	go.uber.org/zap v1.24.0
 	golang.org/x/crypto v0.14.0
