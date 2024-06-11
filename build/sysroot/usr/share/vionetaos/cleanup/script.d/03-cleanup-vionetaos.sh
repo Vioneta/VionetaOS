@@ -4,7 +4,7 @@
  # @Date: 2022-11-15 15:51:44
  # @LastEditors: LinkLeong
  # @LastEditTime: 2022-11-15 15:53:37
- # @FilePath: /CasaOS/build/sysroot/usr/share/vionetaos/cleanup/script.d/03-cleanup-vionetaos.sh
+ # @FilePath: /VionetaOS/build/sysroot/usr/share/vionetaos/cleanup/script.d/03-cleanup-vionetaos.sh
  # @Description: 
  # @Website: https://www.vionetaos.io
  # Copyright (c) 2022 by icewhale, All Rights Reserved. 

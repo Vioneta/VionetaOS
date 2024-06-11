@@ -3,7 +3,7 @@
  * @Date: 2022-07-26 17:17:57
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-08-01 17:08:08
- * @FilePath: /CasaOS/service/model/o_connections.go
+ * @FilePath: /VionetaOS/service/model/o_connections.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.

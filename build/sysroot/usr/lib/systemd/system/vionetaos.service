@@ -1,7 +1,7 @@
 [Unit]
 After=vionetaos-message-bus.service
 After=rclone.service
-Description=CasaOS Main Service
+Description=VionetaOS Main Service
 
 [Service]
 ExecStart=/usr/bin/vionetaos -c /etc/vionetaos/vionetaos.conf

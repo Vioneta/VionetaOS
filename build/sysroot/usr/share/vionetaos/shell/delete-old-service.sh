@@ -4,7 +4,7 @@
  # @Date: 2022-06-30 10:08:33
  # @LastEditors: LinkLeong
  # @LastEditTime: 2022-07-01 11:17:54
- # @FilePath: /CasaOS/shell/delete-old-service.sh
+ # @FilePath: /VionetaOS/shell/delete-old-service.sh
  # @Description:
 ### 
 
@@ -13,8 +13,8 @@
 # SYSTEM INFO
 readonly UNAME_M="$(uname -m)"
 
-# CasaOS PATHS
-readonly CASA_REPO=Vioneta/CasaOS
+# VionetaOS PATHS
+readonly CASA_REPO=Vioneta/VionetaOS
 readonly CASA_UNZIP_TEMP_FOLDER=/tmp/vionetaos
 readonly CASA_BIN=vionetaos
 readonly CASA_BIN_PATH=/usr/bin/vionetaos

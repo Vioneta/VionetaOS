@@ -12,9 +12,9 @@
   "homepage": "https://github.com/Vioneta/VionetaOS#readme",
   "description": "Casaos Typescript+Axios SDK",
   "keywords": [
-    "CasaOS",
+    "VionetaOS",
     "SDK",
-    "CasaOS Axios"
+    "VionetaOS Axios"
   ],
   "main": "dist/index.js",
   "files": [

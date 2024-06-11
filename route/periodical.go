@@ -6,7 +6,7 @@
  * @Date: 2022-07-01 15:11:36
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-09-05 16:28:46
- * @FilePath: /CasaOS/route/periodical.go
+ * @FilePath: /VionetaOS/route/periodical.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.

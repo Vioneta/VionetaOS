@@ -3,7 +3,7 @@
  * @Date: 2022-07-27 10:35:29
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-08-01 13:56:44
- * @FilePath: /CasaOS/pkg/samba/smaba.go
+ * @FilePath: /VionetaOS/pkg/samba/smaba.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.

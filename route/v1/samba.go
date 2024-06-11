@@ -3,7 +3,7 @@
  * @Date: 2022-07-26 11:08:48
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-08-17 18:25:42
- * @FilePath: /CasaOS/route/v1/samba.go
+ * @FilePath: /VionetaOS/route/v1/samba.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
@@ -45,7 +45,7 @@ func GetSambaStatus(c *gin.Context) {
 	needInit := true
 	if file.Exists("/etc/samba/smb.conf") {
 		str := file.ReadLine(1, "/etc/samba/smb.conf")
-		if strings.Contains(str, "# Copyright (c) 2021-2022 CasaOS Inc. All rights reserved.") {
+		if strings.Contains(str, "# Copyright (c) 2021-2022 VionetaOS Inc. All rights reserved.") {
 			needInit = false
 		}
 	}

@@ -3,7 +3,7 @@
  * @Date: 2022-05-13 18:15:46
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-09-05 11:58:02
- * @FilePath: /CasaOS/pkg/config/init.go
+ * @FilePath: /VionetaOS/pkg/config/init.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
@@ -45,7 +45,7 @@ var (
 
 // 初始化设置，获取系统的部分信息。
 func InitSetup(config string, sample string) {
-	ConfigFilePath = CasaOSConfigFilePath
+	ConfigFilePath = VionetaOSConfigFilePath
 	if len(config) > 0 {
 		ConfigFilePath = config
 	}

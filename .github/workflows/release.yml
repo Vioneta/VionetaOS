@@ -11,7 +11,7 @@ jobs:
   call-workflow-passing-data:
     uses: Vioneta/github/.github/workflows/go_release.yml@main
     with:
-      project-name: CasaOS
+      project-name: VionetaOS
       file-name: vionetaos
     secrets:
       GoogleID: ${{ secrets.GoogleID }}

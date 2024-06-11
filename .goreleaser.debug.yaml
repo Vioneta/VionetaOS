@@ -144,7 +144,7 @@ changelog:
 # release:
 #   github:
 #     owner: Vioneta
-#     name: CasaOS
+#     name: VionetaOS
 #   draft: true
 #   prerelease: auto
 #   mode: replace
@@ -152,7 +152,7 @@ changelog:
 release:
   github:
     owner: Vioneta
-    name: CasaOS
+    name: VionetaOS
   draft: true
   prerelease: auto
   mode: replace

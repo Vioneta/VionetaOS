@@ -5,12 +5,12 @@ import (
 	"github.com/Vioneta/VionetaOS/service"
 )
 
-type CasaOS struct {
+type VionetaOS struct {
 	fileUploadService *service.FileUploadService
 }
 
-func NewCasaOS() codegen.ServerInterface {
-	return &CasaOS{
+func NewVionetaOS() codegen.ServerInterface {
+	return &VionetaOS{
 		fileUploadService: service.NewFileUploadService(),
 	}
 }

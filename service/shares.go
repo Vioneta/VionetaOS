@@ -3,7 +3,7 @@
  * @Date: 2022-07-26 11:21:14
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-08-18 11:16:25
- * @FilePath: /CasaOS/service/shares.go
+ * @FilePath: /VionetaOS/service/shares.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.
@@ -74,7 +74,7 @@ func (s *sharesStruct) UpdateConfigFile() {
 		dirName := filepath.Base(share.Path)
 		configStr += `
 [` + dirName + `]
-comment = CasaOS share ` + dirName + `
+comment = VionetaOS share ` + dirName + `
 public = Yes
 path = ` + share.Path + `
 browseable = Yes
@@ -95,12 +95,12 @@ force user = root
 func (s *sharesStruct) InitSambaConfig() {
 	if file.Exists("/etc/samba/smb.conf") {
 		str := file.ReadLine(1, "/etc/samba/smb.conf")
-		if strings.Contains(str, "# Copyright (c) 2021-2022 CasaOS Inc. All rights reserved.") {
+		if strings.Contains(str, "# Copyright (c) 2021-2022 VionetaOS Inc. All rights reserved.") {
 			return
 		}
 		file.MoveFile("/etc/samba/smb.conf", "/etc/samba/smb.conf.bak")
 		var smbConf = ""
-		smbConf += `# Copyright (c) 2021-2022 CasaOS Inc. All rights reserved.
+		smbConf += `# Copyright (c) 2021-2022 VionetaOS Inc. All rights reserved.
 #
 #
 #                          ______     _______
@@ -131,7 +131,7 @@ func (s *sharesStruct) InitSambaConfig() {
 #  |/     \|  (_______)  (______/   \_______/  |/            \_/
 #
 #
-# IMPORTANT: CasaOS will not provide technical support for any issues
+# IMPORTANT: VionetaOS will not provide technical support for any issues
 #            caused by unauthorized modification to the configuration.
 
 [global]

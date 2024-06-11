@@ -44,7 +44,7 @@ func GetSystemCheckVersion(c *gin.Context) {
 		installLog.Type = types.NOTIFY_TYPE_NEED_CONFIRM
 		installLog.CreatedAt = strconv.FormatInt(time.Now().Unix(), 10)
 		installLog.UpdatedAt = strconv.FormatInt(time.Now().Unix(), 10)
-		installLog.Name = "CasaOS System"
+		installLog.Name = "VionetaOS System"
 		service.MyService.Notify().AddLog(installLog)
 	}
 	data := make(map[string]interface{}, 3)
@@ -76,9 +76,9 @@ func SystemUpdate(c *gin.Context) {
 // @Security ApiKeyAuth
 // @Success 200 {string} string "ok"
 // @Router /sys/error/logs [get]
-func GetCasaOSErrorLogs(c *gin.Context) {
+func GetVionetaOSErrorLogs(c *gin.Context) {
 	line, _ := strconv.Atoi(c.DefaultQuery("line", "100"))
-	c.JSON(common_err.SUCCESS, model.Result{Success: common_err.SUCCESS, Message: common_err.GetMsg(common_err.SUCCESS), Data: service.MyService.System().GetCasaOSLogs(line)})
+	c.JSON(common_err.SUCCESS, model.Result{Success: common_err.SUCCESS, Message: common_err.GetMsg(common_err.SUCCESS), Data: service.MyService.System().GetVionetaOSLogs(line)})
 }
 
 // 系统配置
@@ -89,7 +89,7 @@ func GetSystemConfigDebug(c *gin.Context) {
 	version := service.MyService.Casa().GetCasaosVersion()
 	var bugContent string = fmt.Sprintf(`
 	 - OS: %s
-	 - CasaOS Version: %s
+	 - VionetaOS Version: %s
 	 - Disk Total: %v 
 	 - Disk Used: %v 
 	 - System Info: %s
@@ -110,7 +110,7 @@ func GetSystemConfigDebug(c *gin.Context) {
 // @Security ApiKeyAuth
 // @Success 200 {string} string "ok"
 // @Router /sys/port [get]
-func GetCasaOSPort(c *gin.Context) {
+func GetVionetaOSPort(c *gin.Context) {
 	c.JSON(common_err.SUCCESS,
 		model.Result{
 			Success: common_err.SUCCESS,
@@ -127,7 +127,7 @@ func GetCasaOSPort(c *gin.Context) {
 // @Param port json string true "port"
 // @Success 200 {string} string "ok"
 // @Router /sys/port [put]
-func PutCasaOSPort(c *gin.Context) {
+func PutVionetaOSPort(c *gin.Context) {
 	json := make(map[string]string)
 	c.ShouldBind(&json)
 	portStr := json["port"]
@@ -165,7 +165,7 @@ func PutCasaOSPort(c *gin.Context) {
 // @Security ApiKeyAuth
 // @Success 200 {string} string "ok"
 // @Router /sys/restart [post]
-func PostKillCasaOS(c *gin.Context) {
+func PostKillVionetaOS(c *gin.Context) {
 	os.Exit(0)
 }
 

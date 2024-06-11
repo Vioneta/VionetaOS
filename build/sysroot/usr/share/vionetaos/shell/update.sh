@@ -4,7 +4,7 @@
  # @Date: 2022-06-30 10:08:33
  # @LastEditors: LinkLeong
  # @LastEditTime: 2022-09-01 22:33:06
- # @FilePath: /CasaOS/build/sysroot/usr/share/vionetaos/shell/update.sh
+ # @FilePath: /VionetaOS/build/sysroot/usr/share/vionetaos/shell/update.sh
  # @Description:
 ### 
 

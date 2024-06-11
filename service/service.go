@@ -3,7 +3,7 @@
  * @Date: 2022-07-12 09:48:56
  * @LastEditors: LinkLeong
  * @LastEditTime: 2022-09-02 22:10:05
- * @FilePath: /CasaOS/service/service.go
+ * @FilePath: /VionetaOS/service/service.go
  * @Description:
  * @Website: https://www.vionetaos.io
  * Copyright (c) 2022 by icewhale, All Rights Reserved.

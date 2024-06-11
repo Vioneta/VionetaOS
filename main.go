@@ -1,5 +1,5 @@
 //go:generate bash -c "mkdir -p codegen && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/vionetaos/openapi.yaml > codegen/vionetaos_api.go"
-//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/Vioneta/CasaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
+//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,client -package message_bus https://raw.githubusercontent.com/Vioneta/VionetaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 package main
 
 import (
@@ -221,7 +221,7 @@ func main() {
 		ReadHeaderTimeout: 5 * time.Second, // fix G112: Potential slowloris attack (see https://github.com/securego/gosec)
 	}
 
-	logger.Info("CasaOS main service is listening...", zap.Any("address", listener.Addr().String()))
+	logger.Info("VionetaOS main service is listening...", zap.Any("address", listener.Addr().String()))
 	// defer service.MyService.Storage().UnmountAllStorage()
 	err = s.Serve(listener) // not using http.serve() to fix G114: Use of net/http serve function that has no support for setting timeouts (see https://github.com/securego/gosec)
 	if err != nil {

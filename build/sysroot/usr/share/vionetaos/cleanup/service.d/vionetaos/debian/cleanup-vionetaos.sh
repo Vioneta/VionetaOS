@@ -52,12 +52,12 @@ onCtrlC() {
     exit 1
 }
 
-Detecting_CasaOS() {
+Detecting_VionetaOS() {
     if [[ ! -x "$(command -v ${CASA_EXEC})" ]]; then
-        Show 2 "CasaOS is not detected, exit the script."
+        Show 2 "VionetaOS is not detected, exit the script."
         exit 1
     else
-        Show 0 "This script will delete the containers you no longer use, and the CasaOS configuration files."
+        Show 0 "This script will delete the containers you no longer use, and the VionetaOS configuration files."
     fi
 }
 
@@ -102,7 +102,7 @@ Uninstall_Casaos() {
 
     # Old Casa Files
     if [[ -d ${CASA_PATH} ]]; then
-        rm -rvf ${CASA_PATH} || Show 1 "Failed to delete legacy CasaOS files."
+        rm -rvf ${CASA_PATH} || Show 1 "Failed to delete legacy VionetaOS files."
     fi
 
     if [[ -f ${CASA_CONF_PATH_OLD} ]]; then
@@ -123,7 +123,7 @@ Uninstall_Casaos() {
     rm -rvf /var/lib/vionetaos/docker_root
 }
 
-Detecting_CasaOS
+Detecting_VionetaOS
 
 while true; do
     echo -n -e "         ${aCOLOUR[4]}Do you want delete all containers? Y/n :${COLOUR_RESET}"
@@ -163,7 +163,7 @@ if [[ ${UNINSTALL_ALL_CONTAINER} == true ]]; then
     done
 
     while true; do
-        echo -n -e "         ${aCOLOUR[4]}Do you want delete all AppData of CasaOS? Y/n :${COLOUR_RESET}"
+        echo -n -e "         ${aCOLOUR[4]}Do you want delete all AppData of VionetaOS? Y/n :${COLOUR_RESET}"
         read -r input
         case $input in
         [yY][eE][sS] | [yY])
