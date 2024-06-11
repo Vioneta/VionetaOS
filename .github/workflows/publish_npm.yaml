@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          
+
       - run: git tag --sort=-creatordate | head -n 1
       - name: Get version
         id: get_version
@@ -28,7 +28,7 @@ jobs:
       - name: Get commit id
         id: get_commit_id
         run: echo "COMMIT_ID=$( git rev-parse --short "$GITHUB_SHA" )" >> $GITHUB_OUTPUT
-        
+
       - run: echo "${{ steps.get_version.outputs.VERSION }}-${{ steps.get_commit_id.outputs.COMMIT_ID }}"
       - name: Set version
         run: |
@@ -43,4 +43,4 @@ jobs:
       - run: npm run start
       - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
