@@ -15,7 +15,7 @@ readonly CASA_SERVICE_LIB=/lib/systemd/system/vionetaos.service
 readonly CASA_SERVICE_ETC=/etc/systemd/system/vionetaos.service
 
 # Old Casa Files
-readonly CASA_PATH=/casaOS
+readonly CASA_PATH=/vionetaos
 readonly CASA_CONF_PATH_OLD=/etc/vionetaos.conf
 
 readonly aCOLOUR=(
